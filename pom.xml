@@ -62,13 +62,13 @@
                 <executions>
                     <!--=====================uninstallations=======================================-->
                     <execution>
-                        <id>feature-uninstallation-from-default-runtime</id>
+                        <id>feature-uninstallation-from-runtime1</id>
                         <phase>package</phase>
                         <goals>
                             <goal>uninstall</goal>
                         </goals>
                         <configuration>
-                            <runtime>default</runtime>
+                            <runtime>runtime1</runtime>
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
                             </destination>
                             <features>
@@ -92,13 +92,13 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>feature-uninstallation-from-runtime1</id>
+                        <id>feature-uninstallation-from-runtime2</id>
                         <phase>package</phase>
                         <goals>
                             <goal>uninstall</goal>
                         </goals>
                         <configuration>
-                            <runtime>runtime1</runtime>
+                            <runtime>runtime2</runtime>
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2</destination>
                             <features>
                                 <feature>
@@ -121,13 +121,13 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>feature-uninstallation-from-runtime2</id>
+                        <id>feature-uninstallation-from-runtime3</id>
                         <phase>package</phase>
                         <goals>
                             <goal>uninstall</goal>
                         </goals>
                         <configuration>
-                            <runtime>runtime2</runtime>
+                            <runtime>runtime3</runtime>
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2</destination>
                             <features>
                                 <feature>
@@ -150,13 +150,13 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>feature-uninstallation-from-runtime3</id>
+                        <id>feature-uninstallation-from-runtime4</id>
                         <phase>package</phase>
                         <goals>
                             <goal>uninstall</goal>
                         </goals>
                         <configuration>
-                            <runtime>runtime3</runtime>
+                            <runtime>runtime4</runtime>
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2</destination>
                             <features>
                                 <feature>
@@ -196,13 +196,13 @@
                     </execution>
                     <!-- ============== installation=================================================================-->
                     <execution>
-                        <id>feature-installation-default-runtime</id>
+                        <id>feature-installation-runtime1</id>
                         <phase>package</phase>
                         <goals>
                             <goal>install</goal>
                         </goals>
                         <configuration>
-                            <runtime>default</runtime>
+                            <runtime>runtime1</runtime>
                             <repositoryURL>${repoURL}</repositoryURL>
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
                             </destination>
@@ -240,13 +240,13 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>feature-installation-runtime1</id>
+                        <id>feature-installation-runtime2</id>
                         <phase>package</phase>
                         <goals>
                             <goal>install</goal>
                         </goals>
                         <configuration>
-                            <runtime>runtime1</runtime>
+                            <runtime>runtime2</runtime>
                             <repositoryURL>${repoURL}</repositoryURL>
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
                             </destination>
@@ -284,13 +284,13 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>feature-installation-runtime2</id>
+                        <id>feature-installation-runtime3</id>
                         <phase>package</phase>
                         <goals>
                             <goal>install</goal>
                         </goals>
                         <configuration>
-                            <runtime>runtime2</runtime>
+                            <runtime>runtime3</runtime>
                             <repositoryURL>${repoURL}</repositoryURL>
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
                             </destination>
@@ -328,13 +328,13 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>feature-installation-runtime3</id>
+                        <id>feature-installation-runtime4</id>
                         <phase>package</phase>
                         <goals>
                             <goal>install</goal>
                         </goals>
                         <configuration>
-                            <runtime>runtime3</runtime>
+                            <runtime>runtime4</runtime>
                             <repositoryURL>${repoURL}</repositoryURL>
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
                             </destination>
@@ -389,19 +389,20 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <executions>
-                <execution>
-                    <phase>package</phase>
-                    <configuration>
-                        <tasks>
-                            <replace dir="${c5-custom-product.and.version}/wso2" token="false" value="true">
-                                <include name="**/bundles.info" />
-                            </replace>
-                        </tasks>
-                    </configuration>
-                    <goals>
-                        <goal>run</goal>
-                    </goals>
-                </execution>
+                    <execution>
+                        <phase>package</phase>
+                        <configuration>
+                            <tasks>
+                                <replace dir="${c5-custom-product.and.version}/wso2" token="false"
+                                         value="true">
+                                    <include name="**/bundles.info"/>
+                                </replace>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
