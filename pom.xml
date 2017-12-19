@@ -72,26 +72,26 @@
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
                             </destination>
                             <features>
-                                <feature>
+                               <!-- <feature>
                                     <id>org.wso2.carbon.c5.sample.feature.group</id>
                                     <version>5.2.0</version>
-                                </feature>
+                                </feature>-->
                                 <feature>
-                                    <id>sample.4.feature.group</id>
+                                    <id>sample.8.feature.group</id>
                                     <version>5.2.0</version>
                                 </feature>
-                                <feature>
+                                <!--<feature>
                                     <id>sample.6.feature.group</id>
                                     <version>5.2.0</version>
                                 </feature>
                                 <feature>
                                     <id>sample.7.feature.group</id>
                                     <version>5.2.0</version>
-                                </feature>
+                                </feature>-->
                             </features>
                         </configuration>
                     </execution>
-                    <execution>
+                  <!--  <execution>
                         <id>feature-uninstallation-from-runtime2</id>
                         <phase>package</phase>
                         <goals>
@@ -193,9 +193,12 @@
                                 </feature>
                             </features>
                         </configuration>
-                    </execution>
+                    </execution>-->
                     <!-- ============== installation=================================================================-->
-                    <execution>
+
+
+
+                   <!-- <execution>
                         <id>feature-installation-runtime1</id>
                         <phase>package</phase>
                         <goals>
@@ -207,182 +210,179 @@
                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
                             </destination>
                             <features>
-                                <feature>
-                                    <id>org.wso2.carbon.c5.sample.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.4.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.6.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.7.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <!--==========Adding new Features============-->
-                                <feature>
-                                    <id>sample.12.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.14.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.19.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                            </features>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>feature-installation-runtime2</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>install</goal>
-                        </goals>
-                        <configuration>
-                            <runtime>runtime2</runtime>
-                            <repositoryURL>${repoURL}</repositoryURL>
-                            <destination>${basedir}/${c5-custom-product.and.version}/wso2
-                            </destination>
-                            <features>
-                                <feature>
-                                    <id>org.wso2.carbon.pax.exam.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
+                                &lt;!&ndash;  <feature>
+                                      <id>org.wso2.carbon.c5.sample.feature.group</id>
+                                      <version>5.2.0.1</version>
+                                  </feature>
+                                  <feature>
+                                      <id>sample.4.feature.group</id>
+                                      <version>5.2.0.1</version>
+                                  </feature>
+                                  <feature>
+                                      <id>sample.6.feature.group</id>
+                                      <version>5.2.0.1</version>
+                                  </feature>
+                                  <feature>
+                                      <id>sample.7.feature.group</id>
+                                      <version>5.2.0.1</version>
+                                  </feature>&ndash;&gt;
+                                &lt;!&ndash;==========Adding new Features============&ndash;&gt;
                                 <feature>
                                     <id>sample.8.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.9.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.13.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <!--==========Adding new Features============-->
-                                <feature>
-                                    <id>sample.5.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.16.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.17.feature.group</id>
                                     <version>5.2.0</version>
                                 </feature>
                             </features>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>feature-installation-runtime3</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>install</goal>
-                        </goals>
-                        <configuration>
-                            <runtime>runtime3</runtime>
-                            <repositoryURL>${repoURL}</repositoryURL>
-                            <destination>${basedir}/${c5-custom-product.and.version}/wso2
-                            </destination>
-                            <features>
-                                <feature>
-                                    <id>org.wso2.carbon.c5.sample.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.6.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.10.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.11.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <!--==========Adding new Features============-->
-                                <feature>
-                                    <id>sample.15.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.18.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.20.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                            </features>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>feature-installation-runtime4</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>install</goal>
-                        </goals>
-                        <configuration>
-                            <runtime>runtime4</runtime>
-                            <repositoryURL>${repoURL}</repositoryURL>
-                            <destination>${basedir}/${c5-custom-product.and.version}/wso2
-                            </destination>
-                            <features>
-                                <feature>
-                                    <id>org.wso2.carbon.pax.exam.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>org.wso2.carbon.c5.sample.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>org.wso2.carbon.c5.extending.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.4.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.5.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.6.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.7.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.8.feature.group</id>
-                                    <version>5.2.0.1</version>
-                                </feature>
-                                <!--==========Adding new Features============-->
-                                <feature>
-                                    <id>sample.11.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.16.feature.group</id>
-                                    <version>5.2.0</version>
-                                </feature>
-                            </features>
-                        </configuration>
-                    </execution>
+-->
+
+
+
+
+                    <!-- <execution>
+                         <id>feature-installation-runtime2</id>
+                         <phase>package</phase>
+                         <goals>
+                             <goal>install</goal>
+                         </goals>
+                         <configuration>
+                             <runtime>runtime2</runtime>
+                             <repositoryURL>${repoURL}</repositoryURL>
+                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
+                             </destination>
+                             <features>
+                                 <feature>
+                                     <id>org.wso2.carbon.pax.exam.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.8.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.9.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.13.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 &lt;!&ndash;==========Adding new Features============&ndash;&gt;
+                                 <feature>
+                                     <id>sample.5.feature.group</id>
+                                     <version>5.2.0</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.16.feature.group</id>
+                                     <version>5.2.0</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.17.feature.group</id>
+                                     <version>5.2.0</version>
+                                 </feature>
+                             </features>
+                         </configuration>
+                     </execution>
+                     <execution>
+                         <id>feature-installation-runtime3</id>
+                         <phase>package</phase>
+                         <goals>
+                             <goal>install</goal>
+                         </goals>
+                         <configuration>
+                             <runtime>runtime3</runtime>
+                             <repositoryURL>${repoURL}</repositoryURL>
+                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
+                             </destination>
+                             <features>
+                                 <feature>
+                                     <id>org.wso2.carbon.c5.sample.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.6.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.10.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.11.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 &lt;!&ndash;==========Adding new Features============&ndash;&gt;
+                                 <feature>
+                                     <id>sample.15.feature.group</id>
+                                     <version>5.2.0</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.18.feature.group</id>
+                                     <version>5.2.0</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.20.feature.group</id>
+                                     <version>5.2.0</version>
+                                 </feature>
+                             </features>
+                         </configuration>
+                     </execution>
+                     <execution>
+                         <id>feature-installation-runtime4</id>
+                         <phase>package</phase>
+                         <goals>
+                             <goal>install</goal>
+                         </goals>
+                         <configuration>
+                             <runtime>runtime4</runtime>
+                             <repositoryURL>${repoURL}</repositoryURL>
+                             <destination>${basedir}/${c5-custom-product.and.version}/wso2
+                             </destination>
+                             <features>
+                                 <feature>
+                                     <id>org.wso2.carbon.pax.exam.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>org.wso2.carbon.c5.sample.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>org.wso2.carbon.c5.extending.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.4.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.5.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.6.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.7.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.8.feature.group</id>
+                                     <version>5.2.0.1</version>
+                                 </feature>
+                                 &lt;!&ndash;==========Adding new Features============&ndash;&gt;
+                                 <feature>
+                                     <id>sample.11.feature.group</id>
+                                     <version>5.2.0</version>
+                                 </feature>
+                                 <feature>
+                                     <id>sample.16.feature.group</id>
+                                     <version>5.2.0</version>
+                                 </feature>
+                             </features>
+                         </configuration>
+                     </execution>-->
                 </executions>
             </plugin>
             <plugin>
